@@ -171,8 +171,8 @@ fn propose_treasury_spend(
     );
     send_xt(
         connection,
-        xt.clone(),
-        Some("treasury spend"),
+        xt.hex_encode(),
+        "treasury spend",
         XtStatus::Finalized,
     );
     xt
@@ -196,8 +196,8 @@ fn send_treasury_approval(proposal_id: u32, connection: &Connection) -> Governan
     );
     send_xt(
         connection,
-        xt.clone(),
-        Some("treasury approval"),
+        xt.hex_encode(),
+        "treasury approval",
         XtStatus::Finalized,
     );
     xt
@@ -217,8 +217,8 @@ fn send_treasury_rejection(proposal_id: u32, connection: &Connection) -> Governa
     );
     send_xt(
         connection,
-        xt.clone(),
-        Some("treasury rejection"),
+        xt.hex_encode(),
+        "treasury rejection",
         XtStatus::Finalized,
     );
     xt
